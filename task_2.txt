@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class PlayerSelection {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String options="";
+        ArrayList<player> players = new ArrayList<player>();
+        while (!options.equals("E")){
+            switch(options){
+                case"A":
+                   System.out.println("Enter name");
+                   String name= input.nextLine();
+                   System.out.println("Enter ID");
+                   String Id=input.nextLine();
+                   System.out.println("Enter type");
+                   String type=input.nextLine();
+                   System.out.println("Enter age");
+                   int age=input.nextInt();
+                   System.out.println("Enter player average");
+                   double playerAvg=input.nextDouble();
+                   System.out.println("Enter number of wickets");
+                   int wickets=input.nextInt();
+                   System.out.println("Enter total runs");
+                   int runs=input.nextInt();
+                   System.out.println("Enter best score");
+                   double bestScore=input.nextDouble();
+                   System.out.println("Enter match playded");
+                   int matchPlayed=input.nextInt();
+
+                   players.add(new player(name,Id,type,age,playerAvg,wickets,runs,bestScore,matchPlayed))
+                case"V":
+                    for(int count=0;count<players.size();count++){
+                        System.out.println("Name:"+players[count].player.name);
+                        System.out.println("ID:"+players[count].player.Id);
+                        System.out.println("Type:"+players[count].players.type);
+                        System.out.println("age:"+players[count].players.);
+                        System.out.println("Average:");
+                        System.out.println("No. of wickets:");
+                        System.out.println("Total runs:");
+                        System.out.println("Best score:");
+                        System.out.println("Match played:");
+                    }
+                case"BA":
+                case"BO":
+                case"BK":   
+            }
+        }
+    }
+}
